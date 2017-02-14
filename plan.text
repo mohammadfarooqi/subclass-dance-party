@@ -1,0 +1,25 @@
+=== REQUIREMENTS ===
+
+- Refactor the Dancer class and its subclass BlinkyDancer from functional inheritance to pseudoclassical.
+
+- Make at least two new kinds of dancers. This will require creating a new factory function for each one (and making sure that your new JavaScript files are included in dancefloor.html).
+  - Add a link in the top bar of dancefloor.html to create a dancer of each new type you create
+  - Write tests for new types. Use spec/blinkyDancerSpec.js as a template for new test files, and make sure to include them in SpecRunner.html.
+    - background picture = barn
+    - when adding dancers, randomly add dancers on page. 1 dancer added for 1 click
+
+- Make a button that, when clicked, tells all the dancers to line up against one side of the dance floor. Remember you've got a global array of all created dancers (it's defined in src/init.js) so you can loop through that array and tell each object to lineUp. You'll need to add a lineUp method to each of your dancer types - they don't all have to do exactly the same thing.
+  - when button is clicked, move dancers (either in side by side position or randomly on page) to the top of the page
+
+- Make dancers that interact with other dancers. For example, by iterating across the array window.dancers and using the Pythagorean Theorem to calculate your distance from each other dancer, you can have a dancer find its n closest neighbors and do something based on their positions.
+  - when invoked, all dancers will come on both sides of the page evenly and do the interaction
+    - interaction: pair would walk/dance towards each other, semi circle and walk/dance back to partner's spot in line.
+
+- Make a dancer that reacts to the mouse (use jQuery to add a mouseover handler).
+  - when clicked on any character, character falls down
+    - option A: exits from left/right side
+    - option B: wait 2-3 sec and disappear (fadeout) off page
+
+- Go back and add at least two additional unit tests. If possible, try to add tests that will require you improve your implementation in order to make them pass.
+
+===
